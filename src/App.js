@@ -1,12 +1,21 @@
 import React from 'react';
-import WeatherLocation from './components/WeatherLocation';
+import LocationList from './components/LocationList';
 
 import './App.css';
+
+const cities = [
+  'Buenos Aires,ar',
+  'Ushuaia,ar',
+  'Lima,per',
+  'Bogota,col',
+  'Ciudad de Mexico,mx',
+  'Madrid,es'
+]
 
 function App() {
   return (
     <div className="App">
-      <WeatherLocation />
+      <LocationList cities={cities}/>
     </div>
   );
 }
