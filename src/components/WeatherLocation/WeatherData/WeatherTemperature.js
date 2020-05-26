@@ -9,7 +9,7 @@ const icons = {
     [WeatherType.SUN]: "day-sunny",
     [WeatherType.RAIN]: "rain",
     [WeatherType.SNOW]: "snow",
-    [WeatherType.THUNDER]: "day-thunderstore",
+    [WeatherType.THUNDER]: "day-thunderstorm",
     [WeatherType.DRIZZLE]: "day-showers"
 };
 
