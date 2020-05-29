@@ -2,21 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ForecastItem from './ForecastItem';
 import transformForecast from './../services/transformForecast';
+import { api_key, url_base_forecast } from './../constants/api_url';
 import './styles.css';
-
-/*const days = [
-    'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes'
-];
-
-const data = {
-    temperature: 10,
-    humidity: 10,
-    weatherState: 'normal',
-    wind: 'normal'
-}*/
-
-const api_key = "37d78a1aaf982e48acc83acfd9f49e25";
-const url = "http://api.openweathermap.org/data/2.5/forecast";
 
 class ForeCastExtended extends Component {
 
@@ -39,7 +26,7 @@ class ForeCastExtended extends Component {
     }
 
     updateCity = city => {
-        const url_forecast = `${url}?q=${city}&appid=${api_key}`;
+        const url_forecast = `${url_base_forecast}?q=${city}&appid=${api_key}`;
         fetch(url_forecast).then(data => 
             (data.json())
         ).then( weather_data => {
